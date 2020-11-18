@@ -1,21 +1,18 @@
 import React from "react";
-import beyArray from "../api";
 
 
 class BeyCard extends React.Component {
 
-  beyClickHandler = () => {
-    
-    this.props.bey.favorite = true
-    this.props.appClickHandler(this.props.bey)
+  newClickHandler = () => {
+    this.props.appClickHandler(this.props.beyObj)
   }
 
   render() {
     return (
-      <div className="card" key={this.props.bey.id} >
+      <div className="card" key={this.props.beyObj.id} >
         <span>
-          <h2> {this.props.bey.name}</h2>
-          <img onClick={this.beyClickHandler} alt={this.props.bey.name} src={this.props.bey.img} />
+          <h2> {this.props.beyObj.name}</h2>
+          <img onClick={this.newClickHandler} alt={this.props.beyObj.name} src={this.props.beyObj.img} />
         </span>
       </div>
       );
@@ -23,3 +20,5 @@ class BeyCard extends React.Component {
   }
 
 export default BeyCard;
+
+
