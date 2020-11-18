@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
+import BeyContainer from './Containers/BeyContainer'
+import Favorites from './Containers/Favorites'
 
-const App = () => {
 
-  return (
-    <div className="container" >
-
-    </div>
-  );
-};
+class App extends React.Component{
+  render(){
+    return (
+      <>
+          <BeyContainer/>
+          <Favorites/>
+      </>
+    );
+  };
+}
 
 export default App;
