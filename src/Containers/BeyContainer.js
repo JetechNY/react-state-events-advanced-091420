@@ -7,9 +7,10 @@ class BeyContainer extends React.Component {
   renderBey = beyArray.map(beyObj => <BeyCard key={beyObj.id} bey={beyObj} appClickHandler={this.props.appClickHandler}/>)
 
   render() {
-    console.log(this.renderBey.[0].props)
+    
     return (
       <div className="index">
+        <h1>Index</h1>
         {this.renderBey}
       </div>
     );

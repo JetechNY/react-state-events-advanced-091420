@@ -1,9 +1,12 @@
 import React from "react";
+import beyArray from "../api";
 
 
 class BeyCard extends React.Component {
 
   beyClickHandler = () => {
+    
+    this.props.bey.favorite = true
     this.props.appClickHandler(this.props.bey)
   }
 

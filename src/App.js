@@ -9,8 +9,10 @@ class App extends React.Component{
   state = { bey: {} }
 
   appClickHandler = (bey_obj) => {
-    console.log("App", bey_obj)
-    this.setState({bey: bey_obj})
+    let newBeyArray = []
+    newBeyArray.push(bey_obj)
+    this.setState({bey: [bey_obj, ...newBeyArray]})
+    console.log(newBeyArray)
   }
 
   render(){
