@@ -5,7 +5,7 @@ class Favorites extends React.Component {
 
   renderBey = () => {
     return(
-      this.props.beyArray.filter(beyObj => beyObj.favorite).map(beyObj => <BeyCard key={beyObj.id} beyObj={beyObj}/>)
+      this.props.beyArray.filter(beyObj => beyObj.favorite).map(beyObj => <BeyCard falseClickHandler={this.props.falseClickHandler} key={beyObj.id} beyObj={beyObj}/>)
     )
   }
 
